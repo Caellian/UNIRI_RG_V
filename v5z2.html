@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V5Z2 - Tin Švagelj</title>
+    <link rel="stylesheet" type="text/css" href="/src/style.css" />
+  </head>
+  <body class="v4" onload="main()">
+    <h1>Tin Švagelj > Vježbe 5 > Zadatak 2</h1>
+    <ul>
+      <li><a href="..">Nazad</a></li>
+      <li><a href="../v5z1">Zadatak 1</a></li>
+      <li><a href="../v5z3">Zadatak 3</a></li>
+    </ul>
+
+    <canvas width="600" height="400" id="zad2">
+      Vaš preglednik ne podržava Canvas elemente za prikaz
+    </canvas>
+    <div
+      style="
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+      "
+    >
+      <button class="sharp" id="xButton">Rotiraj po x-osi</button>
+      <button class="sharp" id="yButton">Rotiraj po y-osi</button>
+      <button class="sharp" id="zButton">Rotiraj po z-osi</button>
+    </div>
+
+    <script src="/src/v5z2.mjs" type="module"></script>
+  </body>
+</html>

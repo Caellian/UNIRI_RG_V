@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V4Z8 - Tin Švagelj</title>
+    <link rel="stylesheet" type="text/css" href="/src/style.css" />
+  </head>
+  <body class="v4" onload="main()">
+    <h1>Tin Švagelj > Vježbe 4 > Zadatak 8</h1>
+    <ul>
+      <li><a href="..">Nazad</a></li>
+      <li><a href="../v4z7">Zadatak 7</a></li>
+      <li><a href="../v4z9">Zadatak 9</a></li>
+    </ul>
+
+    <canvas width="500" height="500" id="zad8">
+      Vaš preglednik ne podržava Canvas elemente za prikaz
+    </canvas>
+
+    <div
+      style="
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <p style="width: max-content; padding: 0">Centar rotacije:</p>
+      <button class="sharp active" id="z8_i_btn">Ishodište</button>
+      <span>/</span>
+      <button class="sharp" id="z8_v_btn">Vrh</button>
+    </div>
+
+    <script src="/src/lib/webgl-utils.js"></script>
+    <script src="/src/lib/webgl-debug.js"></script>
+    <script src="/src/lib/cuon-utils.js"></script>
+    <script src="/src/v4.js"></script>
+    <script src="/src/init_context.js"></script>
+    <script src="/node_modules/gl-matrix/gl-matrix.js"></script>
+    <script src="/src/v4z8.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V4Z2 - Tin Švagelj</title>
+    <link rel="stylesheet" type="text/css" href="/src/style.css" />
+  </head>
+  <body class="v4" onload="main()">
+    <h1>Tin Švagelj > Vježbe 4 > Zadatak 2</h1>
+    <ul>
+      <li><a href="..">Nazad</a></li>
+      <li><a href="../v4z1">Zadatak 1</a></li>
+      <li><a href="../v4z3">Zadatak 3</a></li>
+    </ul>
+
+    <canvas width="500" height="500" id="zad2">
+      Vaš preglednik ne podržava Canvas elemente za prikaz
+    </canvas>
+
+    <script src="/src/lib/webgl-utils.js"></script>
+    <script src="/src/lib/webgl-debug.js"></script>
+    <script src="/src/lib/cuon-utils.js"></script>
+    <script src="/src/v4.js"></script>
+    <script src="/src/init_context.js"></script>
+    <script type="module">
+      import { NDArray, array, multiply } from "/src/lib/vectorious.mjs";
+      import {
+        vec2,
+        vec3,
+        mxMul,
+        translate,
+        rotate,
+        deg2rad,
+      } from "/src/linalg.js";
+
+      let A = vec2(0, 0.5);
+      let B = vec2(-0.5, -0.5);
+      let C = mxMul(
+        translate(A),
+        rotate(deg2rad(60)),
+        translate(A.copy().scale(-1)),
+        vec3(B.x, B.y, 1.0)
+      );
+      C.x = Math.round(C.x * 1000) / 1000;
+      C.y = Math.round(C.y * 1000) / 1000;
+
+      window.A = A;
+      window.B = B;
+      window.C = C;
+    </script>
+    <script src="/src/v4z2.js"></script>
+  </body>
+</html>
